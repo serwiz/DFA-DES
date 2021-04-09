@@ -1,7 +1,7 @@
 #ifndef H_INIT_H
 #define H_INIT_H
 
-#define NB_WRONG_CIPHER 32
+
 
 /**
  * Initialise les différentes variables du projet

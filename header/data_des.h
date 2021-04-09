@@ -5,9 +5,15 @@
  * Thanks to the "Differential Cryptanalysis of The Data Encryption" book
  * by Adi Shamir, Eli Biham 
  * For thoose data.
- **/ 
+ **/
+#define NB_WRONG_CIPHER 32
 
 static int nb_sbox = 8;
+
+// Nombre de permutations à effectuer
+static int v[16] = {1, 1, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 1};
+
+static long missing_bit_pos[] = {14, 15, 19, 20, 51, 54, 58, 60};
 
 static int IP[] =
     {

@@ -1,13 +1,10 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#include "../header/init.h"
+#include "../header/data_des.h"
 
 
 
-int init_var(char** argv, long * m, long * c, long * c_wrong ) {
-    return init_m(argv[1], m) || init_c(argv[2], c) || init_c_wrong(argv[3], c_wrong);
-}
 
 int init_m(char * argv, long * m) {
     FILE * f = NULL;
@@ -51,4 +48,9 @@ int init_c_wrong(char * argv, long * c_wrong) {
     }
 
     return 0;
+}
+
+int init_var(char **argv, long *m, long *c, long *c_wrong)
+{
+    return init_m(argv[1], m) || init_c(argv[2], c) || init_c_wrong(argv[3], c_wrong);
 }
