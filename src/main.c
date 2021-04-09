@@ -28,43 +28,77 @@ int main(int argc, char** argv) {
         printf("Error: Initialisation failed.");
         return 2;
     }
-
+    printf("[");
+    couleur(BLEU);
+    printf("INFO");
+    couleur(O);
+    printf("]");
     printf("        Researching secret key K...\n\n");
+    
     uint64_t K16 = generateK16(encrypted_message, encrypted_wrong);
+    printf("[");
+    couleur(BLEU);
+    printf("INFO");
+    couleur(O);
+    printf("]");
     printf("        Key K16 found:\n");
     couleur("1");
     printf("                    %lx \n\n", K16);
     couleur(O);
 
-
-    printf("        Reverse key schreduling on K16...\n");
+    printf("[");
+    couleur(BLEU);
+    printf("INFO");
+    couleur(O);
+    printf("]");
+    printf("        Reverse key schreduling on K16...");
     K16 = reverse_keyschred(K16);
-    printf("        Done:\n");
+    printf("  Done:\n");
     couleur("1");
     printf("                    %lx \n\n", K16);
     couleur(O);
 
     uint64_t K;
-    printf("        Exhaustive attack on missing bits...\n");
+    printf("[");
+    couleur(BLEU);
+    printf("INFO");
+    couleur(O);
+    printf("]");
+    printf("        Exhaustive attack on missing bits...");
     K = exhaustive_attack(clear_message, encrypted_message, K16);
-    printf("        Done:\n");
+    printf("  Done:\n");
     couleur("1");
     printf("                    %lx \n\n", K);
     couleur(O);
 
-    printf("        Adding parity bits...\n");
+    printf("[");
+    couleur(BLEU);
+    printf("INFO");
+    couleur(O);
+    printf("]");
+    printf("        Adding parity bits...");
     K = add_parity_bits(K);
-    printf("        Done:\n");
+    printf("  Done:\n");
     couleur("1");
     printf("                    %lx \n\n", K);
     couleur(O);
 
+    printf("[");
+    couleur(BLEU);
+    printf("INFO");
+    couleur(O);
+    printf("]");
     printf("        Secret key found :\n\n");
     couleur(JAUNE);
     couleur("1");
     printf("                    %lx\n\n", K);
     couleur(O);
 
+    printf("[");
+    couleur(BLEU);
+    printf("INFO");
+    couleur(O);
+    printf("]");
     printf("        Checking DES output with secret key:\n");
     if(DES(clear_message, K) == encrypted_message) {
         couleur(VERT);

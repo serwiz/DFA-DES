@@ -6,8 +6,11 @@ EXEC=DFA_DES
 GDB=gdb --args
 
 
-.PHONY: clean
+.PHONY: clean mrproper
 
+all:
+
+exec: compile run clean
 
 run:
 	./$(EXEC) message.txt chiffre.txt chiffres_faux.txt
