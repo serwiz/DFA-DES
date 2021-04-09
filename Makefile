@@ -13,7 +13,7 @@ all:
 exec: compile run clean
 
 run:
-	./$(EXEC) message.txt chiffre.txt chiffres_faux.txt
+	./$(EXEC) input/message.txt input/chiffre.txt input/chiffres_faux.txt
 
 debug: DES.o init.o main.o
 	$(CC) -o -gstabs $(EXEC) $(BIN)*.o
@@ -37,6 +37,7 @@ main.o: $(SRC)main.c
 
 clean:
 	rm -rf $(BIN)*
+	rm -rf ./-gstabs
 
 mrproper: clean
 	rm $(EXEC)
