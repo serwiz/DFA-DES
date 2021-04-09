@@ -114,10 +114,3 @@ int main(int argc, char** argv) {
 
 
 
-void info() {
-    printf("[");
-    couleur(BLEU);
-    printf("INFO");
-    couleur(O);
-    printf("]");
-}

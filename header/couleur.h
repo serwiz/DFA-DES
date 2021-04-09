@@ -17,6 +17,13 @@
 /**
  * Affiche le status [INFO] dans le terminal
  **/
-void info();
+void info()
+{
+    printf("[");
+    couleur(BLEU);
+    printf("INFO");
+    couleur(O);
+    printf("]");
+}
 
 #endif
