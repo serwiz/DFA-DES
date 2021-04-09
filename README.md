@@ -54,7 +54,7 @@ Il est possible de revenir à la version stable du projet grâce au git tag "V1.
 
 
 ### Copyright 
-auteur: SERHAN Wissam
+auteur: SERHAN Wissam  
 date: Mars - Avril 2021    
     
 
