@@ -23,17 +23,16 @@ compile: DES.o init.o key.o main.o
 	$(CC) -o $(EXEC) $(BIN)*.o
 
 DES.o: $(SRC)DES.c
-	$(CC) -o $(BIN)$@ -c $< $(CFLAGS)
+	$(CC) -o $(BIN)$@ -c $< 
 
 init.o: $(SRC)init.c
-	$(CC) -o $(BIN)$@ -c $< $(CFLAGS)
+	$(CC) -o $(BIN)$@ -c $< 
 
 key.o: $(SRC)key.c
-	$(CC) -o $(BIN)$@ -c $< $(CFLAGS)
+	$(CC) -o $(BIN)$@ -c $< 
 
 main.o: $(SRC)main.c
-	$(CC) -o $(BIN)$@ -c $< $(CFLAGS)
-
+	$(CC) -o $(BIN)$@ -c $< 
 
 
 clean:
