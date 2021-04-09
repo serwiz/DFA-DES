@@ -47,9 +47,9 @@ Il est également possible de lancer le projet avec gdb pour le debugging :
 Le fichier étant entiérement configurable il est possible d'importer ses propres message.txt chiffre.txt ou chiffres_faux.txt.  
 Il faut cependant faire attention à leur format :
 * Pour message.txt et chiffre.txt écrire les données en hexadecimal de la sorte "4A7FBF8C2F0EAD97" sans espace.
-* Idem pour chiffres_faux.txt veillez cependant à écrire un chiffré par ligne
+* Idem pour chiffres_faux.txt veillez cependant à écrire un chiffré par ligne. 32 chiffrés sont nécessaire le cas écheant modifier la variable **NB_CYPHER_WRONG**
 
-Il est possible de revenir à la version stable du projet grâce au git tag "V1.0"
+Il est possible de revenir à la version stable du projet grâce au git tag "V1.1"
 
 
 
